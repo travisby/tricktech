@@ -7,3 +7,10 @@ def index(request):
         'index.html',
         {'active': 'index'}
     )
+
+
+def contact(request):
+    return render_to_response(
+        'contact.html',
+        {'active': 'contact'}
+    )
