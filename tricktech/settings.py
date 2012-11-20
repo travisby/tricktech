@@ -1,5 +1,6 @@
 # Django settings for tricktech project.
 import os
+import dj_database_url
 
 
 DEBUG = True
@@ -155,3 +156,4 @@ LOGGING = {
         },
     }
 }
+DATABSES['default'] = dj_database_url.config()
