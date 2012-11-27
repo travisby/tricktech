@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title  %} Admin {% endblock %}
+
+{% block content %}
+    <table>
+        <tr>
+            <th>Customer</th>
+            <th>Service</th>
+            <th>Date</th
+        </tr>
+        {% for service in customer_services %}
+            <tr>
+                <td>{{service.person_first_name}} {{service.person_last_name}}</td>
+                <td>{{service.service.name}}</td>
+                <td>{{service.date}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+{% endblock %}
