@@ -1,1 +1,86 @@
-[{"pk": 1, "model": "static_website.service", "fields": {"price": "0", "name": "Diagnosis"}}, {"pk": 2, "model": "static_website.service", "fields": {"price": "30", "name": "Virus Removal"}}, {"pk": 3, "model": "static_website.service", "fields": {"price": "15", "name": "Hardware Upgrade"}}, {"pk": 4, "model": "static_website.service", "fields": {"price": "25", "name": "Hardware Replacement"}}, {"pk": 5, "model": "static_website.service", "fields": {"price": "50", "name": "Training"}}, {"pk": 6, "model": "static_website.service", "fields": {"price": "50", "name": "Questionable Material Hiding"}}, {"pk": 1, "model": "static_website.customerservice", "fields": {"date": "2012-11-27T00:37:46.344Z", "person_last_name": "Beatty", "service": 2, "person_first_name": "Travis"}}, {"pk": 2, "model": "static_website.customerservice", "fields": {"date": "2012-11-27T01:46:09.981Z", "person_last_name": "bye professor", "service": 2, "person_first_name": "hi professor"}}, {"pk": 1, "model": "static_website.faq", "fields": {"answer": "Did you try turning it on and off again?", "question": "How do I fix my computer?"}}, {"pk": 2, "model": "static_website.faq", "fields": {"answer": "Try going to http://gmail.com", "question": "How do I check my email?"}}]
+[
+{
+    "pk": 1, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "0", 
+        "name": "Diagnosis"
+    }
+},
+{
+    "pk": 2, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "30", 
+        "name": "Virus Removal"
+    }
+},
+{
+    "pk": 3, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "15", 
+        "name": "Hardware Upgrade"
+    }
+},
+{
+    "pk": 4, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "25", 
+        "name": "Hardware Replacement"
+    }
+},
+{
+    "pk": 5, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "50", 
+        "name": "Training"
+    }
+},
+{
+    "pk": 6, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "50", 
+        "name": "Questionable Material Hiding"
+    }
+},
+{
+    "pk": 1, 
+    "model": "static_website.customerservice", 
+    "fields": {
+        "date": "2012-11-27T00:37:46.344Z", 
+        "person_last_name": "Beatty", 
+        "service": 2, 
+        "person_first_name": "Travis"
+    }
+},
+{
+    "pk": 2, 
+    "model": "static_website.customerservice", 
+    "fields": {
+        "date": "2012-11-27T01:46:09.981Z", 
+        "person_last_name": "bye professor", 
+        "service": 2, 
+        "person_first_name": "hi professor"
+    }
+},
+{
+    "pk": 1, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "Did you try turning it on and off again?", 
+        "question": "How do I fix my computer?"
+    }
+},
+{
+    "pk": 2, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "Try going to http://gmail.com", 
+        "question": "How do I check my email?"
+    }
+}
+]
