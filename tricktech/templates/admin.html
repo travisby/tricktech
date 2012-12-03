@@ -11,7 +11,7 @@
         </tr>
         {% for service in customer_services %}
             <tr>
-                <td>{{service.person_first_name}} {{service.person_last_name}}</td>
+                <td>{{service.user.username}}</td>
                 <td>{{service.service.name}}</td>
                 <td>{{service.date}}</td>
             </tr>
