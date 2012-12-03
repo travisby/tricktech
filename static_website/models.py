@@ -36,4 +36,4 @@ class Chat(models.Model):
     timestamp = models.DateTimeField(auto_now=True)
 
     def __unicode__(self):
-        return ('%s %s : %s' % (self.timestamp, self.user.username, self.message))
+        return ('%s: %s' % (self.user.username, self.message))
