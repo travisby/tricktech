@@ -1,6 +1,6 @@
 # Create your views here.
 from django.shortcuts import render_to_response
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 
 import static_website.models
 import static_website.forms
@@ -59,3 +59,25 @@ def services(request):
             'services': static_website.models.Service.objects.all()
         }
     )
+
+def chat(request):
+    if request.method == 'GET':
+        obj = {}
+        obj.update(
+            {
+                'active': 'chat',
+                'chat': static_website.models.Chat.objects.all(),
+                'form': static_website.forms.ChatModelForm,
+            }
+        )
+        return render_to_response(
+            'chat.html',
+            obj
+        )
+    elif request.method == 'POST':
+        form = static_website.forms.ChatModelForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/chat/')
+        else:
+            return HttpResponse('itdonebroke')
