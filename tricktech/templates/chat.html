@@ -3,13 +3,15 @@
 {% block title  %} Chat {% endblock %}
 
 {% block content %}
-{% for message in chat %}
-    {{message}} <br>
+    <div id="chat">
+        {% for message in chat %}
+            {{message}}
+            <br>
+        {% endfor %}
+    </div>
 
-{% endfor %}
-
-<form method="post" action="/chat/">
-    {{form}}
-    <button type="submit" class="btn btn-primary">Send</button>
-</form>
+    <form method="post" action="/chat/">
+        {{form}}
+        <button type="submit" class="btn btn-primary">Send</button>
+    </form>
 {% endblock %}
