@@ -21,9 +21,14 @@ class CustomerService(models.Model):
             (self.person_first_name,self.person_last_name, self.service, self.date)
         )
 
+
 class Faq(models.Model):
     question = models.TextField()
     answer = models.TextField()
+
+    def __unicode__(self):
+        return self.question
+
 
 class Chat(models.Model):
     user = models.ForeignKey(User)
