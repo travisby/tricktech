@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 
 class Service(models.Model):
@@ -10,8 +11,7 @@ class Service(models.Model):
 
 
 class CustomerService(models.Model):
-    person_first_name = models.CharField(max_length=30)
-    person_last_name = models.CharField(max_length=30)
+    user = models.ForeignKey(User)
     service = models.ForeignKey(Service)
     date = models.DateTimeField(auto_now=True)
 
