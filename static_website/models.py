@@ -24,3 +24,8 @@ class CustomerService(models.Model):
 class Faq(models.Model):
     question = models.TextField()
     answer = models.TextField()
+
+class Chat(models.Model):
+    user = models.ForeignKey(User)
+    message = models.TextField()
+    timestamp = models.DateTimeField(auto_now=True)
