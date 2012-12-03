@@ -1,0 +1,7 @@
+#!/bin/bash
+
+git checkout heroku
+git merge master
+git push heroku heroku:master
+heroku run python manage.py syncdb
+git checkout master

@@ -1,1 +1,3 @@
+#!/bin/bash
+
 ./manage.py dumpdata --indent=4 static_website > initial_data.json
