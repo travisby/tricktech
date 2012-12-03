@@ -6,4 +6,18 @@
     <p>Welcome to Tricktech!</p>
 
     <p>We are a new company out here in Poughkeepsie, New York.  We started at Marist College, and became what we are now.</p>
+
+    <p>We provide a variety of services!  Some of what we offer is:</p>
+    <ul>
+    {% for service in services %}
+        <li>{{service.name}}</li>
+    {% endfor %}
+    </ul>
+
+    <p>
+        We have become big web developers, and app developers recently.  Check out our <a href="http://github.com/travisby">Github Page!</a>
+    </p>
+    <p>
+        We are proficient in: HTML5, CSS3, JQuery, Python, Django, and Android Java Development.  See our <a href="http://github.com/travisby/PyMafiaWeb/">Latest Project</a>
+    </p>
 {% endblock %}

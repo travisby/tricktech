@@ -6,9 +6,13 @@ import static_website.models
 import static_website.forms
 
 def index(request):
+    services = static_website.models.Service.objects.order_by('?')[:3]
     return render_to_response(
         'index.html',
-        {'active': 'index'}
+        {
+            'active': 'index',
+            'services': services,
+        }
     )
 
 
