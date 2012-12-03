@@ -51,7 +51,8 @@ def faq(request):
     return render_to_response(
         'faq.html',
         {
-            'faqs': static_website.models.Faq.objects.all()
+            'active': 'faq',
+            'faqs': static_website.models.Faq.objects.all(),
         }
     )
 
