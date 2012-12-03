@@ -1,66 +1,140 @@
 [
 {
-    "pk": 1,
-    "model": "static_website.service",
+    "pk": 1, 
+    "model": "static_website.service", 
     "fields": {
-        "price": "0",
+        "price": "0", 
         "name": "Diagnosis"
     }
 },
 {
-    "pk": 2,
-    "model": "static_website.service",
+    "pk": 2, 
+    "model": "static_website.service", 
     "fields": {
-        "price": "30",
+        "price": "30", 
         "name": "Virus Removal"
     }
 },
 {
-    "pk": 3,
-    "model": "static_website.service",
+    "pk": 3, 
+    "model": "static_website.service", 
     "fields": {
-        "price": "15",
+        "price": "15", 
         "name": "Hardware Upgrade"
     }
 },
 {
-    "pk": 4,
-    "model": "static_website.service",
+    "pk": 4, 
+    "model": "static_website.service", 
     "fields": {
-        "price": "25",
+        "price": "25", 
         "name": "Hardware Replacement"
     }
 },
 {
-    "pk": 5,
-    "model": "static_website.service",
+    "pk": 5, 
+    "model": "static_website.service", 
     "fields": {
-        "price": "50",
+        "price": "50", 
         "name": "Training"
     }
 },
 {
-    "pk": 6,
-    "model": "static_website.service",
+    "pk": 6, 
+    "model": "static_website.service", 
     "fields": {
-        "price": "50",
+        "price": "50", 
         "name": "Questionable Material Hiding"
     }
 },
 {
-    "pk": 1,
-    "model": "static_website.faq",
+    "pk": 7, 
+    "model": "static_website.service", 
     "fields": {
-        "answer": "Did you try turning it on and off again?",
+        "price": "20", 
+        "name": "Remote Service"
+    }
+},
+{
+    "pk": 8, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "2000", 
+        "name": "App Development"
+    }
+},
+{
+    "pk": 9, 
+    "model": "static_website.service", 
+    "fields": {
+        "price": "1500", 
+        "name": "Website Development"
+    }
+},
+{
+    "pk": 1, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "Did you try turning it on and off again?", 
         "question": "How do I fix my computer?"
     }
 },
 {
-    "pk": 2,
-    "model": "static_website.faq",
+    "pk": 2, 
+    "model": "static_website.faq", 
     "fields": {
-        "answer": "Try going to http://gmail.com",
+        "answer": "Try going to http://gmail.com", 
         "question": "How do I check my email?"
+    }
+},
+{
+    "pk": 3, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "An Operating System is the main software on your computer.  An example would be Microsoft's Windows, or Apple's OSX.\r\n\r\nThese operating systems have versions attached to them, like \"Windows 7\" or \"OSX 10.7\"\r\n\r\n", 
+        "question": "What is an Operating System."
+    }
+},
+{
+    "pk": 4, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "Viruses are bad software.  Viruses exist to make your computer do something unexpected. But luckily, they're not permanent!  We can take care of them.", 
+        "question": "What are viruses?"
+    }
+},
+{
+    "pk": 5, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "We remove viruses by using a plethora of virus removal tools.", 
+        "question": "How do you remove viruses?"
+    }
+},
+{
+    "pk": 6, 
+    "model": "static_website.faq", 
+    "fields": {
+        "answer": "We personally use Clamwin on our Windows computers.  If you are using an Apple computer, there is ClamAV", 
+        "question": "What antivirus software do you recommend?"
+    }
+},
+{
+    "pk": 1, 
+    "model": "static_website.chat", 
+    "fields": {
+        "timestamp": "2012-12-03T23:09:53.351Z", 
+        "message": "Hello!", 
+        "user": 1
+    }
+},
+{
+    "pk": 2, 
+    "model": "static_website.chat", 
+    "fields": {
+        "timestamp": "2012-12-03T23:10:01.796Z", 
+        "message": "How are you today?", 
+        "user": 2
     }
 }
 ]
