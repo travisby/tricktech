@@ -29,3 +29,6 @@ class Chat(models.Model):
     user = models.ForeignKey(User)
     message = models.TextField()
     timestamp = models.DateTimeField(auto_now=True)
+
+    def __unicode__(self):
+        return ('%s %s : %s' % (self.timestamp, self.user.username, self.message))

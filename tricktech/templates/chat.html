@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title  %} Chat {% endblock %}
+
+{% block content %}
+{% for message in chat %}
+    {{message}} <br>
+
+{% endfor %}
+
+<form method="post" action="/chat/">
+    {{form}}
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+{% endblock %}
