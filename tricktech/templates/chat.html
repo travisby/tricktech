@@ -5,8 +5,9 @@
 {% block content %}
     <div id="chat">
         {% for message in chat %}
+        <div class="message">
             {{message}}
-            <br>
+        </div>
         {% endfor %}
     </div>
 

@@ -2,3 +2,6 @@
     border: medium solid black;
     padding: 20px;
 }
+.message {
+    border: thin dotted blue;
+}
