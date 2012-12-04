@@ -1,562 +1,265 @@
 [
 {
-    "pk": 1, 
-    "model": "static_website.service", 
+    "pk": 1,
+    "model": "static_website.service",
     "fields": {
-        "price": "0", 
+        "price": "0",
         "name": "Diagnosis"
     }
 },
 {
-    "pk": 2, 
-    "model": "static_website.service", 
+    "pk": 2,
+    "model": "static_website.service",
     "fields": {
-        "price": "30", 
+        "price": "30",
         "name": "Virus Removal"
     }
 },
 {
-    "pk": 3, 
-    "model": "static_website.service", 
+    "pk": 3,
+    "model": "static_website.service",
     "fields": {
-        "price": "15", 
+        "price": "15",
         "name": "Hardware Upgrade"
     }
 },
 {
-    "pk": 4, 
-    "model": "static_website.service", 
+    "pk": 4,
+    "model": "static_website.service",
     "fields": {
-        "price": "25", 
+        "price": "25",
         "name": "Hardware Replacement"
     }
 },
 {
-    "pk": 5, 
-    "model": "static_website.service", 
+    "pk": 5,
+    "model": "static_website.service",
     "fields": {
-        "price": "50", 
+        "price": "50",
         "name": "Training"
     }
 },
 {
-    "pk": 6, 
-    "model": "static_website.service", 
+    "pk": 6,
+    "model": "static_website.service",
     "fields": {
-        "price": "50", 
+        "price": "50",
         "name": "Questionable Material Hiding"
     }
 },
 {
-    "pk": 7, 
-    "model": "static_website.service", 
+    "pk": 7,
+    "model": "static_website.service",
     "fields": {
-        "price": "20", 
+        "price": "20",
         "name": "Remote Service"
     }
 },
 {
-    "pk": 8, 
-    "model": "static_website.service", 
+    "pk": 8,
+    "model": "static_website.service",
     "fields": {
-        "price": "2000", 
+        "price": "2000",
         "name": "App Development"
     }
 },
 {
-    "pk": 9, 
-    "model": "static_website.service", 
+    "pk": 9,
+    "model": "static_website.service",
     "fields": {
-        "price": "1500", 
+        "price": "1500",
         "name": "Website Development"
     }
 },
 {
-    "pk": 1, 
-    "model": "static_website.faq", 
+    "pk": 1,
+    "model": "static_website.faq",
     "fields": {
-        "answer": "Did you try turning it on and off again?", 
+        "answer": "Did you try turning it on and off again?",
         "question": "How do I fix my computer?"
     }
 },
 {
-    "pk": 2, 
-    "model": "static_website.faq", 
+    "pk": 2,
+    "model": "static_website.faq",
     "fields": {
-        "answer": "Try going to http://gmail.com", 
+        "answer": "Try going to http://gmail.com",
         "question": "How do I check my email?"
     }
 },
 {
-    "pk": 3, 
-    "model": "static_website.faq", 
+    "pk": 3,
+    "model": "static_website.faq",
     "fields": {
-        "answer": "An Operating System is the main software on your computer.  An example would be Microsoft's Windows, or Apple's OSX.\r\n\r\nThese operating systems have versions attached to them, like \"Windows 7\" or \"OSX 10.7\"\r\n\r\n", 
+        "answer": "An Operating System is the main software on your computer.  An example would be Microsoft's Windows, or Apple's OSX.\r\n\r\nThese operating systems have versions attached to them, like \"Windows 7\" or \"OSX 10.7\"\r\n\r\n",
         "question": "What is an Operating System."
     }
 },
 {
-    "pk": 4, 
-    "model": "static_website.faq", 
+    "pk": 4,
+    "model": "static_website.faq",
     "fields": {
-        "answer": "Viruses are bad software.  Viruses exist to make your computer do something unexpected. But luckily, they're not permanent!  We can take care of them.", 
+        "answer": "Viruses are bad software.  Viruses exist to make your computer do something unexpected. But luckily, they're not permanent!  We can take care of them.",
         "question": "What are viruses?"
     }
 },
 {
-    "pk": 5, 
-    "model": "static_website.faq", 
+    "pk": 5,
+    "model": "static_website.faq",
     "fields": {
-        "answer": "We remove viruses by using a plethora of virus removal tools.", 
+        "answer": "We remove viruses by using a plethora of virus removal tools.",
         "question": "How do you remove viruses?"
     }
 },
 {
-    "pk": 6, 
-    "model": "static_website.faq", 
+    "pk": 6,
+    "model": "static_website.faq",
     "fields": {
-        "answer": "We personally use Clamwin on our Windows computers.  If you are using an Apple computer, there is ClamAV", 
+        "answer": "We personally use Clamwin on our Windows computers.  If you are using an Apple computer, there is ClamAV",
         "question": "What antivirus software do you recommend?"
     }
 },
 {
-    "pk": 1, 
-    "model": "auth.permission", 
+    "pk": 1,
+    "model": "auth.user",
     "fields": {
-        "codename": "add_group", 
-        "name": "Can add group", 
-        "content_type": 2
-    }
-},
-{
-    "pk": 2, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_permission", 
-        "name": "Can add permission", 
-        "content_type": 1
-    }
-},
-{
-    "pk": 3, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_user", 
-        "name": "Can add user", 
-        "content_type": 3
-    }
-},
-{
-    "pk": 4, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_group", 
-        "name": "Can change group", 
-        "content_type": 2
-    }
-},
-{
-    "pk": 5, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_permission", 
-        "name": "Can change permission", 
-        "content_type": 1
-    }
-},
-{
-    "pk": 6, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_user", 
-        "name": "Can change user", 
-        "content_type": 3
-    }
-},
-{
-    "pk": 7, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_group", 
-        "name": "Can delete group", 
-        "content_type": 2
-    }
-},
-{
-    "pk": 8, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_permission", 
-        "name": "Can delete permission", 
-        "content_type": 1
-    }
-},
-{
-    "pk": 9, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_user", 
-        "name": "Can delete user", 
-        "content_type": 3
-    }
-},
-{
-    "pk": 10, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_contenttype", 
-        "name": "Can add content type", 
-        "content_type": 4
-    }
-},
-{
-    "pk": 11, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_contenttype", 
-        "name": "Can change content type", 
-        "content_type": 4
-    }
-},
-{
-    "pk": 12, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_contenttype", 
-        "name": "Can delete content type", 
-        "content_type": 4
-    }
-},
-{
-    "pk": 13, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_session", 
-        "name": "Can add session", 
-        "content_type": 5
-    }
-},
-{
-    "pk": 14, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_session", 
-        "name": "Can change session", 
-        "content_type": 5
-    }
-},
-{
-    "pk": 15, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_session", 
-        "name": "Can delete session", 
-        "content_type": 5
-    }
-},
-{
-    "pk": 16, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_site", 
-        "name": "Can add site", 
-        "content_type": 6
-    }
-},
-{
-    "pk": 17, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_site", 
-        "name": "Can change site", 
-        "content_type": 6
-    }
-},
-{
-    "pk": 18, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_site", 
-        "name": "Can delete site", 
-        "content_type": 6
-    }
-},
-{
-    "pk": 19, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_logentry", 
-        "name": "Can add log entry", 
-        "content_type": 7
-    }
-},
-{
-    "pk": 20, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_logentry", 
-        "name": "Can change log entry", 
-        "content_type": 7
-    }
-},
-{
-    "pk": 21, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_logentry", 
-        "name": "Can delete log entry", 
-        "content_type": 7
-    }
-},
-{
-    "pk": 22, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_chat", 
-        "name": "Can add chat", 
-        "content_type": 11
-    }
-},
-{
-    "pk": 23, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_customerservice", 
-        "name": "Can add customer service", 
-        "content_type": 9
-    }
-},
-{
-    "pk": 24, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_faq", 
-        "name": "Can add faq", 
-        "content_type": 10
-    }
-},
-{
-    "pk": 25, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "add_service", 
-        "name": "Can add service", 
-        "content_type": 8
-    }
-},
-{
-    "pk": 26, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_chat", 
-        "name": "Can change chat", 
-        "content_type": 11
-    }
-},
-{
-    "pk": 27, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_customerservice", 
-        "name": "Can change customer service", 
-        "content_type": 9
-    }
-},
-{
-    "pk": 28, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_faq", 
-        "name": "Can change faq", 
-        "content_type": 10
-    }
-},
-{
-    "pk": 29, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "change_service", 
-        "name": "Can change service", 
-        "content_type": 8
-    }
-},
-{
-    "pk": 30, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_chat", 
-        "name": "Can delete chat", 
-        "content_type": 11
-    }
-},
-{
-    "pk": 31, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_customerservice", 
-        "name": "Can delete customer service", 
-        "content_type": 9
-    }
-},
-{
-    "pk": 32, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_faq", 
-        "name": "Can delete faq", 
-        "content_type": 10
-    }
-},
-{
-    "pk": 33, 
-    "model": "auth.permission", 
-    "fields": {
-        "codename": "delete_service", 
-        "name": "Can delete service", 
-        "content_type": 8
-    }
-},
-{
-    "pk": 1, 
-    "model": "auth.user", 
-    "fields": {
-        "username": "GWashington", 
-        "first_name": "", 
-        "last_name": "", 
-        "is_active": true, 
-        "is_superuser": true, 
-        "is_staff": true, 
-        "last_login": "2012-12-03T22:57:22Z", 
-        "groups": [], 
-        "user_permissions": [], 
-        "password": "pbkdf2_sha256$10000$5fjrEmVUtKmR$/dGnSQzAJKLYjrhh8B4Kwsun4gWeYqEzigQ7jhpIJi0=", 
-        "email": "1@1.com", 
+        "username": "GWashington",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2012-12-03T22:57:22Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$10000$5fjrEmVUtKmR$/dGnSQzAJKLYjrhh8B4Kwsun4gWeYqEzigQ7jhpIJi0=",
+        "email": "1@1.com",
         "date_joined": "2012-12-03T22:57:16Z"
     }
 },
 {
-    "pk": 2, 
-    "model": "auth.user", 
+    "pk": 2,
+    "model": "auth.user",
     "fields": {
-        "username": "JAdams", 
-        "first_name": "", 
-        "last_name": "", 
-        "is_active": true, 
-        "is_superuser": false, 
-        "is_staff": false, 
-        "last_login": "2012-12-03T22:57:33Z", 
-        "groups": [], 
-        "user_permissions": [], 
-        "password": "pbkdf2_sha256$10000$cA2aqx8g1rYR$TCziRbhsQFlvNRYk+4Ntwfk38ZOXRmnCG/FGsLWPDDs=", 
-        "email": "", 
+        "username": "JAdams",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2012-12-03T22:57:33Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$10000$cA2aqx8g1rYR$TCziRbhsQFlvNRYk+4Ntwfk38ZOXRmnCG/FGsLWPDDs=",
+        "email": "",
         "date_joined": "2012-12-03T22:57:33Z"
     }
 },
 {
-    "pk": 3, 
-    "model": "auth.user", 
+    "pk": 3,
+    "model": "auth.user",
     "fields": {
-        "username": "TJefferson", 
-        "first_name": "", 
-        "last_name": "", 
-        "is_active": true, 
-        "is_superuser": false, 
-        "is_staff": false, 
-        "last_login": "2012-12-03T22:57:40Z", 
-        "groups": [], 
-        "user_permissions": [], 
-        "password": "pbkdf2_sha256$10000$9IH53vvVNYYR$bwAei3pMhLrXnxEhFnc4FY4B3IixPEkStp97Ep1hHFI=", 
-        "email": "", 
+        "username": "TJefferson",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2012-12-03T22:57:40Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$10000$9IH53vvVNYYR$bwAei3pMhLrXnxEhFnc4FY4B3IixPEkStp97Ep1hHFI=",
+        "email": "",
         "date_joined": "2012-12-03T22:57:40Z"
     }
 },
 {
-    "pk": 4, 
-    "model": "auth.user", 
+    "pk": 4,
+    "model": "auth.user",
     "fields": {
-        "username": "JMadison", 
-        "first_name": "", 
-        "last_name": "", 
-        "is_active": true, 
-        "is_superuser": false, 
-        "is_staff": false, 
-        "last_login": "2012-12-03T22:57:47Z", 
-        "groups": [], 
-        "user_permissions": [], 
-        "password": "pbkdf2_sha256$10000$HpS7EkhlVaIx$DDRlhZsQP0Fcm43VsCgtFKuy/WIqm3deL64/8aJ0sxs=", 
-        "email": "", 
+        "username": "JMadison",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2012-12-03T22:57:47Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$10000$HpS7EkhlVaIx$DDRlhZsQP0Fcm43VsCgtFKuy/WIqm3deL64/8aJ0sxs=",
+        "email": "",
         "date_joined": "2012-12-03T22:57:47Z"
     }
 },
 {
-    "pk": 5, 
-    "model": "auth.user", 
+    "pk": 5,
+    "model": "auth.user",
     "fields": {
-        "username": "JMonroe", 
-        "first_name": "", 
-        "last_name": "", 
-        "is_active": true, 
-        "is_superuser": false, 
-        "is_staff": false, 
-        "last_login": "2012-12-03T22:57:52Z", 
-        "groups": [], 
-        "user_permissions": [], 
-        "password": "pbkdf2_sha256$10000$KO548z8z7av3$WIVk8zkUb+zsIbqCdfgiUm+INiPgGZDZI62RD7GmQ0A=", 
-        "email": "", 
+        "username": "JMonroe",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2012-12-03T22:57:52Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$10000$KO548z8z7av3$WIVk8zkUb+zsIbqCdfgiUm+INiPgGZDZI62RD7GmQ0A=",
+        "email": "",
         "date_joined": "2012-12-03T22:57:52Z"
     }
 },
 {
-    "pk": 6, 
-    "model": "auth.user", 
+    "pk": 6,
+    "model": "auth.user",
     "fields": {
-        "username": "JQAdams", 
-        "first_name": "", 
-        "last_name": "", 
-        "is_active": true, 
-        "is_superuser": false, 
-        "is_staff": false, 
-        "last_login": "2012-12-03T22:57:59Z", 
-        "groups": [], 
-        "user_permissions": [], 
-        "password": "pbkdf2_sha256$10000$4zFK2NY2IXOp$FRi/rMjpwVETm4fDo/KOAwxxZbZk2L87NRBWcIvRZDE=", 
-        "email": "", 
+        "username": "JQAdams",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": false,
+        "is_staff": false,
+        "last_login": "2012-12-03T22:57:59Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$10000$4zFK2NY2IXOp$FRi/rMjpwVETm4fDo/KOAwxxZbZk2L87NRBWcIvRZDE=",
+        "email": "",
         "date_joined": "2012-12-03T22:57:59Z"
     }
 },
 {
-    "pk": 1, 
-    "model": "static_website.chat", 
+    "pk": 1,
+    "model": "static_website.chat",
     "fields": {
-        "timestamp": "2012-12-03T23:09:53.351Z", 
-        "message": "Hello!", 
+        "timestamp": "2012-12-03T23:09:53.351Z",
+        "message": "Hello!",
         "user": 1
     }
 },
 {
-    "pk": 2, 
-    "model": "static_website.chat", 
+    "pk": 2,
+    "model": "static_website.chat",
     "fields": {
-        "timestamp": "2012-12-03T23:10:01.796Z", 
-        "message": "How are you today?", 
+        "timestamp": "2012-12-03T23:10:01.796Z",
+        "message": "How are you today?",
         "user": 2
     }
 },
 {
-    "pk": 3, 
-    "model": "static_website.chat", 
+    "pk": 3,
+    "model": "static_website.chat",
     "fields": {
-        "timestamp": "2012-12-04T00:26:01.314Z", 
-        "message": "Hello, class!", 
+        "timestamp": "2012-12-04T00:26:01.314Z",
+        "message": "Hello, class!",
         "user": 3
     }
 },
 {
-    "pk": 1, 
-    "model": "static_website.customerservice", 
+    "pk": 1,
+    "model": "static_website.customerservice",
     "fields": {
-        "date": "2012-12-04T00:27:03.024Z", 
-        "user": 1, 
+        "date": "2012-12-04T00:27:03.024Z",
+        "user": 1,
         "service": 9
     }
 }
