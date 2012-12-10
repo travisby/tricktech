@@ -7,6 +7,7 @@
 
 <p>Or, alternatively contact us here:</p>
 <form method="post" action="/contact/">
+    {% csrf_token %}
     {{form}}
     <button type="submit" class="btn btn-primary">Submit</button>
 </form>
