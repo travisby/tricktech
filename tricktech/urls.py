@@ -6,6 +6,7 @@ admin.autodiscover()
 urlpatterns = patterns(
     '',
     url(r'^$', 'static_website.views.index', name='index'),
+    url(r'^register/$', 'static_website.views.register', name='register'),
     url(r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'redirect_field_name': 'index'}),
     url(r'^contact/$', 'static_website.views.contact', name='contact'),

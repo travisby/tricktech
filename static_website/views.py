@@ -2,7 +2,7 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
-from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.forms import AuthenticationForm, UserCreationForm
 
 import static_website.models
 import static_website.forms
@@ -115,3 +115,21 @@ def ajax_chat(request, last_message=0):
         },
          context_instance=RequestContext(request)
     )
+
+def register(request):
+    if request.POST:
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponse('itdonebroke')
+    else:
+        form = UserCreationForm()
+        return render_to_response(
+            'register.html',
+            {
+                'form': form
+            },
+            context_instance=RequestContext(request)
+        )
