@@ -12,5 +12,7 @@
             {{form}}
             <button type="submit" class="btn btn-primary">Send</button>
         </form>
+    {% else %}
+        <p>Please <a href='/login/'>login here</a> to chat</p>
     {% endif %}
 {% endblock %}
