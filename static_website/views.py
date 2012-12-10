@@ -1,6 +1,7 @@
 # Create your views here.
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
+from django.template import RequestContext
 
 import static_website.models
 import static_website.forms
@@ -12,7 +13,8 @@ def index(request):
         {
             'active': 'index',
             'services': services,
-        }
+        },
+         context_instance=RequestContext(request)
     )
 
 
@@ -28,7 +30,8 @@ def contact(request):
         )
         return render_to_response(
             'contact.html',
-            obj
+            obj,
+            context_instance=RequestContext(request)
         )
     elif request.method == 'POST':
         form = static_website.forms.CustomerServiceModelForm(request.POST)
@@ -43,7 +46,8 @@ def admin(request):
         'admin.html',
         {
             'customer_services': static_website.models.CustomerService.objects.all()
-        }
+        },
+         context_instance=RequestContext(request)
 
     )
 
@@ -53,7 +57,8 @@ def faq(request):
         {
             'active': 'faq',
             'faqs': static_website.models.Faq.objects.all(),
-        }
+        },
+         context_instance=RequestContext(request)
     )
 
 def services(request):
@@ -62,7 +67,8 @@ def services(request):
         {
             'active': 'services',
             'services': static_website.models.Service.objects.all()
-        }
+        },
+         context_instance=RequestContext(request)
     )
 
 def chat(request):
@@ -77,7 +83,8 @@ def chat(request):
         )
         return render_to_response(
             'chat.html',
-            obj
+            obj,
+            context_instance=RequestContext(request)
         )
     elif request.method == 'POST':
         form = static_website.forms.ChatModelForm(request.POST)
@@ -92,5 +99,6 @@ def ajax_chat(request, last_message=0):
         'chat_message.html',
         {
             'messages': static_website.models.Chat.objects.filter(pk__gt=last_message)
-        }
+        },
+         context_instance=RequestContext(request)
     )
