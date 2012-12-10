@@ -3,14 +3,23 @@
 {% block title  %} Contact {% endblock %}
 
 {% block content %}
-<p>E-mail me at: <a href="mailto:travisby@gmail.com">travisby@gmail.com</a>!
+    <div class='row'>
+        <div class='span4'>
+            <p>E-mail me at: <a href="mailto:travisby@gmail.com">travisby@gmail.com</a>!
 
-<p>Or, alternatively contact us here:</p>
-{% if user.is_authenticated %}
-<form method="post" action="/contact/">
-    {% csrf_token %}
-    {{form}}
-    <button type="submit" class="btn btn-primary">Submit</button>
-{% endif %}
-</form>
+            <p>Or, alternatively contact us here:</p>
+            {% if user.is_authenticated %}
+            <form method="post" action="/contact/">
+                {% csrf_token %}
+                {{form}}
+                <button type="submit" class="btn btn-primary">Submit</button>
+            {% endif %}
+            </form>
+        </div>
+        {% if not user.is_authenticated %}
+            <div class='offset1 span4'>
+                <p>Login to request our services!</p>
+            </div>
+        {% endif %}
+    </div>
 {% endblock %}
