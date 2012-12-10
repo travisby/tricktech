@@ -7,9 +7,11 @@
         &nbsp;
     </div>
 
-    <form id="chatForm" method="post" action="/chat/">
-        {% csrf_token %}
-        {{form}}
-        <button type="submit" class="btn btn-primary">Send</button>
-    </form>
+    {% if user.is_authenticated %}
+        <form id="chatForm" method="post" action="/chat/">
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-primary">Send</button>
+        </form>
+    {% endif %}
 {% endblock %}

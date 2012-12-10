@@ -3,7 +3,7 @@
 {% block title  %} Login {% endblock %}
 
 {% block content %}
-    {% if user.is_authenticated %}
+    {% if not user.is_authenticated %}
         <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
             {% csrf_token %}
             {{form}}

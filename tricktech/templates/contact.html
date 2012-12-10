@@ -6,9 +6,11 @@
 <p>E-mail me at: <a href="mailto:travisby@gmail.com">travisby@gmail.com</a>!
 
 <p>Or, alternatively contact us here:</p>
+{% if user.is_authenticated %}
 <form method="post" action="/contact/">
     {% csrf_token %}
     {{form}}
     <button type="submit" class="btn btn-primary">Submit</button>
+{% endif %}
 </form>
 {% endblock %}
