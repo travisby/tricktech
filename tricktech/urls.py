@@ -10,6 +10,7 @@ urlpatterns = patterns(
     url(r'^logout/$', 'django.contrib.auth.views.logout', {'redirect_field_name': 'index'}),
     url(r'^contact/$', 'static_website.views.contact', name='contact'),
     url(r'^services/$', 'static_website.views.services', name='services'),
+    url(r'^tAdmin/$', 'static_website.views.admin', name='tricktechAdmin'),
     url(r'^admins/$', 'static_website.views.admin', name='admin'),
     url(r'^faq/$', 'static_website.views.faq', name='faq'),
     url(r'^chat/$', 'static_website.views.chat', name='chat'),

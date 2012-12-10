@@ -42,7 +42,7 @@ def contact(request):
             customer_service = form.save(commit=False)
             customer_service.user = request.user
             customer_service.save()
-            return admin(request)
+            return HttpResponseRedirect('/')
         else:
             return HttpResponse('itdonebroke')
 
@@ -50,6 +50,7 @@ def admin(request):
     return render_to_response(
         'admin.html',
         {
+            'active': 'admin',
             'customer_services': static_website.models.CustomerService.objects.all(),
             'login_form': AuthenticationForm,
         },

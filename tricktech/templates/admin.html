@@ -8,12 +8,14 @@
             <th>Customer</th>
             <th>Service</th>
             <th>Date</th
+            <th>Message</th>
         </tr>
         {% for service in customer_services %}
             <tr>
                 <td>{{service.user.username}}</td>
                 <td>{{service.service.name}}</td>
                 <td>{{service.date}}</td>
+                <td>{{service.message}}</td>
             </tr>
         {% endfor %}
     </table>
