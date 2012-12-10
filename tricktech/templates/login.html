@@ -4,7 +4,7 @@
 
 {% block content %}
     {% if not user.is_authenticated %}
-        <form method="post" action="{% url 'django.contrib.auth.views.login' %}">
+        <form method="post" action='/login/'>
             {% csrf_token %}
             {{form}}
             <input type="submit" value="login" />
