@@ -1,7 +1,11 @@
 // Constants
 FADEINSPEED = 1000;
+REQUESTSPEED = 2000;
+POST_URL = '/chat/';
+AJAX_URL = '/ajax_chat/';
 
 $chat = $('#chat');
+$chatForm = $('#chatForm');
 id = '';
 
 replaceChatWithoutMagic = function() {
@@ -26,7 +30,7 @@ onSuccess = function(data) {
 request = function() {
     $.ajax(
         {
-        'url': '/ajax_chat/' + id,
+        'url': AJAX_URL + id,
         'success': onSuccess,
         'dataType': 'text',
         'cache': false
@@ -35,4 +39,14 @@ request = function() {
 };
 
 
-setInterval(request, 5000);
+setInterval(request, REQUESTSPEED);
+
+$chatForm.on(
+    'submit',
+    function(e) {
+        e.preventDefault();
+        $.post(POST_URL, $(this).serialize());
+    }
+);
+
+
