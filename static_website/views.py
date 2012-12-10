@@ -1,6 +1,7 @@
 # Create your views here.
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
+from django.core import serializers
 
 import static_website.models
 import static_website.forms
@@ -86,3 +87,11 @@ def chat(request):
             return HttpResponseRedirect('/chat/')
         else:
             return HttpResponse('itdonebroke')
+
+def ajax_chat(request, last_message=0):
+    return HttpResponse(
+    serializers.serialize(
+        'json',
+        static_website.models.Chat.objects.filter(pk__gt=last_message)
+    )
+    )
