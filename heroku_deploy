@@ -3,5 +3,6 @@
 git checkout heroku
 git merge master
 git push heroku heroku:master
+heroku pg:reset HEROKU_POSTGRESQL_CRIMSON_URL --confirm tricktech
 heroku run python manage.py syncdb
 git checkout master
