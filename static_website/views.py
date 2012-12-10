@@ -39,7 +39,9 @@ def contact(request):
     elif request.method == 'POST':
         form = static_website.forms.CustomerServiceModelForm(request.POST)
         if form.is_valid():
-            form.save()
+            customer_service = form.save(commit=False)
+            customer_service.user = request.user
+            customer_service.save()
             return admin(request)
         else:
             return HttpResponse('itdonebroke')
@@ -96,7 +98,10 @@ def chat(request):
     elif request.method == 'POST':
         form = static_website.forms.ChatModelForm(request.POST)
         if form.is_valid():
-            form.save()
+            message = form.save(commit=False)
+            message.user = request.user
+            message.save()
+
             return HttpResponseRedirect('/chat/')
         else:
             return HttpResponse('itdonebroke')
