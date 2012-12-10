@@ -3,17 +3,26 @@
 {% block title  %} Services {% endblock %}
 
 {% block content %}
-    <table>
-        <tr>
-            <th>Service</th>
-            <th>Price</th>
-        </tr>
-        {% for service in services %}
-            <tr>
-                <td>{{service.name}}</td>
-                <td>{{service.price}}</td>
-            </tr>
-        {% endfor %}
-    </table>
+    <div class='row'>
+        <div class='span5'>
+            <table>
+                <tr>
+                    <th>Service</th>
+                    <th>Price</th>
+                </tr>
+                {% for service in services %}
+                    <tr>
+                        <td>{{service.name}}</td>
+                        <td>{{service.price}}</td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class='offset1 span4'>
+            <img height='100' width='150' src='/static/img/open_computer.jpg'>
+            <img height='100' width='150'src='/static/img/android.png'>
+            <img height='100' width='150'src='/static/img/apple.jpg'>
+        </div>
+    </div>
 
 {% endblock %}
