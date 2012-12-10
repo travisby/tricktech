@@ -21,7 +21,7 @@
                                 <li {% if active == 'faq' %} class="active" {% endif %}><a href="/faq">F.A.Q.</a></li>
                             </ul>
                             {% if user.is_authenticated %}
-                                <p class="navbar-text">Welcome back, {{user.username}}</p>
+                            <p class="navbar-text">Welcome back, {{user.username}}.  <a href="/logout/">Logout</a></p>
                             {% else %}
                                 <form method="post" action="{% url 'django.contrib.auth.views.login' %}" class="form-inline navbar-text">
                                     {% csrf_token %}
