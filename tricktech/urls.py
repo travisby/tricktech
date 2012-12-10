@@ -5,6 +5,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
                        url(r'^$', 'static_website.views.index', name='index'),
+                       (r'^login/$', 'django.contrib.auth.views.login', {'template_name': 'login.html'}),
                        url(r'^contact/$', 'static_website.views.contact', name='contact'),
                        url(r'^services/$', 'static_website.views.services', name='services'),
                        url(r'^admins/$', 'static_website.views.admin', name='admin'),

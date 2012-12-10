@@ -23,6 +23,13 @@
                         </div>
                     </div>
                 </nav>
+                <div class="hero-unit">
+                    {% if user.is_authenticated %}
+                        <p>Welcome back, {{user.username}}</p>
+                    {% else %}
+                    <p>Welcome, new user. Please <a href="/login/">log in.</a></p>
+                    {% endif %}
+                </div>
                 {% block content %} {% endblock %}
                 <footer>
                     <img src="/static/img/twitter.png" alt="twitter" height="40" width="40">
