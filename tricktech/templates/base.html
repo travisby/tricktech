@@ -20,16 +20,25 @@
                                 <li {% if active == 'chat' %} class="active" {% endif %}><a href="/chat">Chat</a></li>
                                 <li {% if active == 'faq' %} class="active" {% endif %}><a href="/faq">F.A.Q.</a></li>
                             </ul>
+                            {% if user.is_authenticated %}
+                                <p class="navbar-text">Welcome back, {{user.username}}</p>
+                            {% else %}
+                                <form method="post" action="{% url 'django.contrib.auth.views.login' %}" class="form-inline navbar-text">
+                                    {% csrf_token %}
+                                    <label for="id_username">Username:</label> <input id="id_username" type="text" name="username" maxlength="254" class="login">
+                                    <label for="id_password">Password:</label> <input type="password" name="password" id="id_password" class="login">
+                                    <input type="submit" value="login">
+                                    <input type="hidden" name="next" value="/">
+                                </form>
+                            {% endif %}
                         </div>
                     </div>
                 </nav>
-                <div class="hero-unit">
-                    {% if user.is_authenticated %}
-                        <p>Welcome back, {{user.username}}</p>
-                    {% else %}
-                    <p>Welcome, new user. Please <a href="/login/">log in.</a></p>
-                    {% endif %}
-                </div>
+                {% if not user.is_authenticated %}
+                    <div class="hero-unit">
+                        <p>Welcome, new user. Please <a href="/login/">log in.</a></p>
+                    </div>
+                {% endif %}
                 {% block content %} {% endblock %}
                 <footer>
                     <img src="/static/img/twitter.png" alt="twitter" height="40" width="40">

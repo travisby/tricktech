@@ -2,6 +2,7 @@
 from django.shortcuts import render_to_response
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext
+from django.contrib.auth.forms import AuthenticationForm
 
 import static_website.models
 import static_website.forms
@@ -13,6 +14,7 @@ def index(request):
         {
             'active': 'index',
             'services': services,
+            'login_form': AuthenticationForm,
         },
          context_instance=RequestContext(request)
     )
@@ -26,6 +28,7 @@ def contact(request):
                 'active': 'contact',
                 'services': static_website.models.Service.objects.all(),
                 'form': static_website.forms.CustomerServiceModelForm,
+                'login_form': AuthenticationForm,
             }
         )
         return render_to_response(
@@ -45,7 +48,8 @@ def admin(request):
     return render_to_response(
         'admin.html',
         {
-            'customer_services': static_website.models.CustomerService.objects.all()
+            'customer_services': static_website.models.CustomerService.objects.all(),
+            'login_form': AuthenticationForm,
         },
          context_instance=RequestContext(request)
 
@@ -57,6 +61,7 @@ def faq(request):
         {
             'active': 'faq',
             'faqs': static_website.models.Faq.objects.all(),
+            'login_form': AuthenticationForm,
         },
          context_instance=RequestContext(request)
     )
@@ -66,7 +71,8 @@ def services(request):
         'services.html',
         {
             'active': 'services',
-            'services': static_website.models.Service.objects.all()
+            'services': static_website.models.Service.objects.all(),
+            'login_form': AuthenticationForm,
         },
          context_instance=RequestContext(request)
     )
@@ -79,6 +85,7 @@ def chat(request):
                 'active': 'chat',
                 'chat': static_website.models.Chat.objects.all(),
                 'form': static_website.forms.ChatModelForm,
+                'login_form': AuthenticationForm,
             }
         )
         return render_to_response(
