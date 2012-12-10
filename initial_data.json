@@ -92,7 +92,7 @@
     "model": "static_website.faq",
     "fields": {
         "answer": "An Operating System is the main software on your computer.  An example would be Microsoft's Windows, or Apple's OSX.\r\n\r\nThese operating systems have versions attached to them, like \"Windows 7\" or \"OSX 10.7\"\r\n\r\n",
-        "question": "What is an Operating System."
+        "question": "What is an Operating System?"
     }
 },
 {
