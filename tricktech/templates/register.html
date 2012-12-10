@@ -1,7 +1,5 @@
 {% extends 'base.html' %}
 
-{% block title  %} Login {% endblock %}
-
 {% block content %}
     {% if not user.is_authenticated %}
         <form method="post" action="/register/">
