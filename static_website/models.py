@@ -29,12 +29,3 @@ class Faq(models.Model):
 
     def __unicode__(self):
         return self.question
-
-
-class Chat(models.Model):
-    user = models.ForeignKey(User)
-    message = models.TextField()
-    timestamp = models.DateTimeField(auto_now=True)
-
-    def __unicode__(self):
-        return ('%s: %s' % (self.user.username, self.message))

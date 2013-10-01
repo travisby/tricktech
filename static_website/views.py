@@ -80,42 +80,6 @@ def services(request):
          context_instance=RequestContext(request)
     )
 
-def chat(request):
-    if request.method == 'GET':
-        obj = {}
-        obj.update(
-            {
-                'active': 'chat',
-                'chat': static_website.models.Chat.objects.all(),
-                'form': static_website.forms.ChatModelForm,
-                'login_form': AuthenticationForm,
-            }
-        )
-        return render_to_response(
-            'chat.html',
-            obj,
-            context_instance=RequestContext(request)
-        )
-    elif request.method == 'POST':
-        form = static_website.forms.ChatModelForm(request.POST)
-        if form.is_valid():
-            message = form.save(commit=False)
-            message.user = request.user
-            message.save()
-
-            return HttpResponseRedirect('/chat/')
-        else:
-            return HttpResponse('itdonebroke')
-
-def ajax_chat(request, last_message=0):
-    return render_to_response(
-        'chat_message.html',
-        {
-            'messages': static_website.models.Chat.objects.filter(pk__gt=last_message)
-        },
-         context_instance=RequestContext(request)
-    )
-
 def register(request):
     if request.POST:
         form = UserCreationForm(request.POST)

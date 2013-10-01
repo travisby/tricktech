@@ -5,9 +5,3 @@ class CustomerServiceModelForm(ModelForm):
     class Meta:
         model = CustomerService
         exclude = ('user',)
-
-
-class ChatModelForm(ModelForm):
-    class Meta:
-        model = Chat
-        exclude = ('user',)
